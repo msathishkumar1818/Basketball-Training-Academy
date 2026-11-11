@@ -1601,6 +1601,8 @@ html.dark .theme-toggle-btn .moon-icon {
 .section-eyebrow {
   display: inline-flex;
   align-items: center;
+  width: fit-content;
+  max-width: 100%;
   gap: 0.5rem;
   font-family: 'Oswald', sans-serif;
   font-size: 0.82rem;
@@ -1613,6 +1615,21 @@ html.dark .theme-toggle-btn .moon-icon {
   padding: 0.35rem 0.85rem;
   border-radius: 999px;
   margin-bottom: 1rem;
+}
+
+.inner-hero-content .section-eyebrow,
+.hero-home2-content .section-eyebrow,
+.section-header-center .section-eyebrow,
+.cta-box-inner .section-eyebrow {
+  align-self: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.form-info-col .section-eyebrow {
+  align-self: flex-start;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .section-eyebrow::before {
@@ -5302,6 +5319,7 @@ body.portal-app-page {
 .form-info-col {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .form-info-points {
