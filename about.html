@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About The Academy &amp; Mission | Vortex Basketball Academy</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+
+  <!-- Core Stylesheets (Zero Inline CSS) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+  <!-- ======================================================================
+       PAGE LOADER
+       ====================================================================== -->
+  <div id="page-loader" role="status" aria-live="polite">
+    <div class="loader-brand-box">
+      <div class="loader-logo-wrap">
+        <img src="assets/images/icons/logo.svg" alt="Vortex Basketball Academy Logo" width="72" height="72">
+      </div>
+      <h2 class="loader-brand-title">Vortex Academy</h2>
+      <p class="loader-brand-tag">About &amp; Mission</p>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       GLOBAL FIXED HEADER
+       ====================================================================== -->
+  <header class="site-header" id="main-header">
+    <div class="header-container">
+
+      <!-- Brand Logo & Name -->
+      <a href="index.html" class="brand-link" aria-label="Vortex Basketball Academy Home">
+        <img src="assets/images/icons/logo.svg" alt="Vortex Logo" class="brand-logo-img" width="36" height="36">
+        <div class="brand-text-group">
+          <span class="brand-title">VORTEX <span>HOOPS</span></span>
+          <span class="brand-tagline">TRAINING ACADEMY</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation - Exactly 6 items -->
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <!-- 1. Home (Click-only Dropdown) -->
+        <div class="nav-dropdown-item">
+          <button type="button" class="nav-link nav-dropdown-btn" aria-expanded="false" aria-haspopup="true">
+            <span>Home</span>
+            <svg class="dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="index.html" class="dropdown-link" role="menuitem">
+              <span>Home 1 (Training Hub)</span>
+            </a>
+            <a href="home-2.html" class="dropdown-link" role="menuitem">
+              <span>Home 2 (Pro Performance)</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. Programs -->
+        <a href="programs.html" class="nav-link">Programs</a>
+
+        <!-- 3. Coaches -->
+        <a href="coaches.html" class="nav-link">Coaches</a>
+
+        <!-- 4. About -->
+        <a href="about.html" class="nav-link active">About</a>
+
+        <!-- 5. Dashboard -->
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+
+        <!-- 6. Contact -->
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Header Action Controls -->
+      <div class="header-actions">
+        <!-- RTL / LTR Toggle Button -->
+        <button type="button" class="icon-control-btn rtl-toggle-btn" aria-label="Toggle Text Direction">
+          <span class="dir-label">RTL</span>
+        </button>
+
+        <!-- Dark / Light Mode Toggle Button -->
+        <button type="button" class="icon-control-btn theme-toggle-btn" aria-label="Toggle Theme Mode">
+          <svg class="moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+          <svg class="sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+        </button>
+
+        <!-- Player Portal Login Button -->
+        <a href="login.html" class="header-login-btn" aria-label="Player Portal Login">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+          </svg>
+          <span>Login</span>
+        </a>
+
+        <!-- Mobile Drawer Toggle Hamburger -->
+        <button type="button" class="mobile-toggle-btn" aria-label="Open Mobile Menu" aria-expanded="false"
+          aria-controls="mobile-drawer">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       MOBILE MENU DRAWER & BACKDROP
+       ====================================================================== -->
+  <div class="mobile-menu-backdrop" aria-hidden="true"></div>
+
+  <aside class="mobile-menu-drawer" id="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-drawer-header">
+      <div class="brand-link">
+        <img src="assets/images/icons/logo.svg" alt="Vortex Logo" class="brand-logo-img" width="32" height="32">
+        <div class="brand-text-group">
+          <span class="brand-title">VORTEX <span>HOOPS</span></span>
+          <span class="brand-tagline">TRAINING ACADEMY</span>
+        </div>
+      </div>
+      <button type="button" class="mobile-close-btn" aria-label="Close Mobile Menu">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" width="20" height="20">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="mobile-drawer-body">
+      <ul class="mobile-nav-list">
+        <!-- 1. Home Accordion (Click only) -->
+        <li class="mobile-accordion-group">
+          <button type="button" class="mobile-nav-link mobile-accordion-btn" aria-expanded="false">
+            <span>Home</span>
+            <svg class="accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"
+              width="16" height="16">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="mobile-accordion-content">
+            <a href="index.html" class="mobile-sub-link">Home 1 (Training Hub)</a>
+            <a href="home-2.html" class="mobile-sub-link">Home 2 (Pro Performance)</a>
+          </div>
+        </li>
+
+        <!-- 2. Programs -->
+        <li>
+          <a href="programs.html" class="mobile-nav-link">Programs</a>
+        </li>
+
+        <!-- 3. Coaches -->
+        <li>
+          <a href="coaches.html" class="mobile-nav-link">Coaches</a>
+        </li>
+
+        <!-- 4. About -->
+        <li>
+          <a href="about.html" class="mobile-nav-link active">About</a>
+        </li>
+
+        <!-- 5. Dashboard -->
+        <li>
+          <a href="dashboard.html" class="mobile-nav-link">Dashboard</a>
+        </li>
+
+        <!-- 6. Contact -->
+        <li>
+          <a href="contact.html" class="mobile-nav-link">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Mobile Controls Row -->
+      <div class="mobile-drawer-controls">
+        <div class="mobile-controls-row">
+          <button type="button" class="mobile-action-pill rtl-toggle-btn" aria-label="Toggle Text Direction">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" width="16" height="16">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+            </svg>
+            <span class="dir-label">RTL</span>
+          </button>
+
+          <button type="button" class="mobile-action-pill theme-toggle-btn" aria-label="Toggle Theme Mode">
+            <svg class="moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" width="16"
+              height="16">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+            <svg class="sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" width="16"
+              height="16">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            <span>Theme</span>
+          </button>
+        </div>
+
+        <a href="login.html" class="mobile-login-pill" aria-label="Player Portal Login">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" width="18" height="18">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+          </svg>
+          <span>Player Portal</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ======================================================================
+       MAIN CONTENT: EXACTLY 5 MAIN CONTENT SECTIONS (INNER PAGE 03)
+       ====================================================================== -->
+  <main id="main-content">
+
+    <!-- --------------------------------------------------------------------
+         SECTION 1: STANDARDIZED INNER PAGE HERO
+         Uniform height across all inner pages (min-height: 420px)
+         -------------------------------------------------------------------- -->
+    <section class="inner-page-hero about-hero-bg" aria-label="About Page Banner">
+      <div class="inner-hero-overlay" aria-hidden="true"></div>
+      <div class="site-container">
+        <div class="inner-hero-content">
+          <span class="section-eyebrow">Institute History &amp; Vision</span>
+          <h1 class="inner-hero-title">The Vortex Performance Philosophy</h1>
+          <p class="inner-hero-desc">
+            Founded on the conviction that athletic mastery is an exact science. We engineer basketball intelligence,
+            kinetic precision, and relentless court habits.
+          </p>
+          <div class="breadcrumb-trail">
+            <a href="index.html">Home</a>
+            <span>&bull;</span>
+            <span>About The Academy</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         SECTION 2: ACADEMY ORIGIN & BIOMECHANICS MISSION
+         -------------------------------------------------------------------- -->
+    <section class="section-origin" aria-label="Academy Origin and Mission">
+      <div class="site-container">
+
+        <div class="origin-grid">
+          <!-- Left Visual Anchor -->
+          <div class="origin-media-wrap">
+            <img src="assets/images/about/p28.jpg" alt="Vortex founder tying basketball shoes on hardwood" width="600"
+              height="480" loading="lazy">
+          </div>
+
+          <!-- Right Heritage Content -->
+          <div>
+            <span class="section-eyebrow">Founded 2018</span>
+            <h2 class="section-heading-lg">From Grassroots Passion to High-Performance Science</h2>
+            <p class="section-subtext">
+              Traditional training relied on archaic drills; we bring kinematic analysis.
+            </p>
+            <p class="section-subtext">
+              Pairing former pro generals with sports biomechanists and digital sensors.
+            </p>
+
+            <div class="origin-stats-row">
+              <div class="origin-stat-item">
+                <span class="origin-stat-num">8+</span>
+                <span class="origin-stat-lbl">Years Operating</span>
+              </div>
+              <div class="origin-stat-item">
+                <span class="origin-stat-num">1,200+</span>
+                <span class="origin-stat-lbl">Athletes Trained</span>
+              </div>
+              <div class="origin-stat-item">
+                <span class="origin-stat-num">98.4%</span>
+                <span class="origin-stat-lbl">Placement Rate</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         SECTION 3: THE 3 FACILITY PILLARS & ARENA TOUR (3 EVEN CARDS)
+         Strictly equal heights, balanced line heights, uniform metrics
+         -------------------------------------------------------------------- -->
+    <section class="section-facility-pillars" aria-label="Academy Training Facilities">
+      <div class="site-container">
+
+        <div class="section-header-center">
+          <span class="section-eyebrow">Campus Tour</span>
+          <h2 class="section-heading-lg">State-of-the-Art Training Facility</h2>
+          <p class="section-subtext">
+            Our 24,000 sq ft compound features everything to build elite athletes.
+          </p>
+        </div>
+
+        <div class="facility-pillars-grid">
+          <!-- Card 1: Maple Arena -->
+          <div class="facility-card">
+            <div class="facility-card-photo">
+              <img src="assets/images/about/p29.jpg" alt="Championship Maple Hardwood Basketball Court" width="400"
+                height="240" loading="lazy">
+            </div>
+            <div class="facility-card-body">
+              <span class="facility-card-tag">Pillar 01 &bull; Courts</span>
+              <h3 class="facility-card-title">Championship Arena</h3>
+              <p class="facility-card-desc">
+                Two hardwood courts equipped with Robbins Bio-Cushion shock absorption.
+              </p>
+              <div class="facility-specs-row">
+                <span>Robbins Hardwood</span>
+                <span>Spalding Arena Rims</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Biomechanics Sensor Lab -->
+          <div class="facility-card">
+            <div class="facility-card-photo">
+              <img src="assets/images/about/p30.jpg" alt="Digital Biomechanics Sports Sensor Station" width="400"
+                height="240" loading="lazy">
+            </div>
+            <div class="facility-card-body">
+              <span class="facility-card-tag">Pillar 02 &bull; Analytics</span>
+              <h3 class="facility-card-title">Sensor Kinematics Lab</h3>
+              <p class="facility-card-desc">
+                High-speed 120Hz cameras and force plates generating instant feedback.
+              </p>
+              <div class="facility-specs-row">
+                <span>Dual Force Plates</span>
+                <span>Noah 3D Sensors</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Recovery Lounge -->
+          <div class="facility-card">
+            <div class="facility-card-photo">
+              <img src="assets/images/about/p31.jpg" alt="Hydrotherapy and athletic recovery suite" width="400"
+                height="240" loading="lazy">
+            </div>
+            <div class="facility-card-body">
+              <span class="facility-card-tag">Pillar 03 &bull; Recovery</span>
+              <h3 class="facility-card-title">Active Recovery Center</h3>
+              <p class="facility-card-desc">
+                Cold plunge contrast pools and Normatec compression suites for rapid recovery.
+              </p>
+              <div class="facility-specs-row">
+                <span>Contrast Pools</span>
+                <span>Normatec Boots</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         SECTION 4: ACADEMY ATHLETE CHARTER & ETHICS
+         -------------------------------------------------------------------- -->
+    <section class="section-charter" aria-label="Academy Athlete Charter and Standards">
+      <div class="site-container">
+
+        <div class="section-header-center">
+          <span class="section-eyebrow">The Vortex Standard</span>
+          <h2 class="section-heading-lg">Our Athlete Commitment Charter</h2>
+          <p class="section-subtext">
+            Athletic excellence requires dedication. Athletes sign our charter upon entry.
+          </p>
+        </div>
+
+        <div class="charter-card-box">
+          <!-- Left Standards List -->
+          <ul class="charter-rules-list">
+            <li class="charter-rule-item">
+              <span class="charter-check-icon" aria-hidden="true">
+                <svg fill="currentColor" viewBox="0 0 20 20" width="16" height="16">
+                  <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd" />
+                </svg>
+              </span>
+              <div>
+                <h3 class="charter-rule-title">Relentless Effort on Every Rep</h3>
+                <p class="charter-rule-desc">We demand 100% intentionality in warmups, shooting drills, and game
+                  simulations regardless of fatigue.</p>
+              </div>
+            </li>
+
+            <li class="charter-rule-item">
+              <span class="charter-check-icon" aria-hidden="true">
+                <svg fill="currentColor" viewBox="0 0 20 20" width="16" height="16">
+                  <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd" />
+                </svg>
+              </span>
+              <div>
+                <h3 class="charter-rule-title">Zero-Excuse Teammate Accountability</h3>
+                <p class="charter-rule-desc">Athletes communicate constructively, rotate proactively on defense, and
+                  hold peers to high behavioral standards.</p>
+              </div>
+            </li>
+
+            <li class="charter-rule-item">
+              <span class="charter-check-icon" aria-hidden="true">
+                <svg fill="currentColor" viewBox="0 0 20 20" width="16" height="16">
+                  <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd" />
+                </svg>
+              </span>
+              <div>
+                <h3 class="charter-rule-title">Academic &amp; NCAA Eligibility Focus</h3>
+                <p class="charter-rule-desc">Collegiate prospect athletes must maintain minimum 3.0 GPA benchmarks
+                  alongside their on-court training schedule.</p>
+              </div>
+            </li>
+
+            <li class="charter-rule-item">
+              <span class="charter-check-icon" aria-hidden="true">
+                <svg fill="currentColor" viewBox="0 0 20 20" width="16" height="16">
+                  <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd" />
+                </svg>
+              </span>
+              <div>
+                <h3 class="charter-rule-title">Psychological Poise Under Duress</h3>
+                <p class="charter-rule-desc">We train players to thrive in hostile atmospheres, execute under referee
+                  whistles, and maintain mental fortitude.</p>
+              </div>
+            </li>
+          </ul>
+
+          <!-- Right Seal Box -->
+          <div class="charter-badge-column">
+            <div class="charter-seal">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="charter-seal-title">Certified Institute of Excellence</h3>
+            <p class="charter-seal-text">
+              Recognized by USA Basketball and FIBA as an elite player development hub.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         SECTION 5: CAMPUS VISIT & FACILITY TOUR CTA (MANDATORY FINAL SECTION)
+         -------------------------------------------------------------------- -->
+    <section class="section-about-cta" aria-label="Book a Facility Tour Call to Action">
+      <div class="site-container">
+        <div class="cta-box-inner">
+
+          <div class="cta-live-indicator">
+            <span class="cta-live-dot" aria-hidden="true"></span>
+            <span>Private Campus Tours Scheduled Monday Through Saturday</span>
+          </div>
+
+          <h2 class="cta-main-title">
+            Tour the Vortex <span>Training Compound</span>
+          </h2>
+
+          <p class="cta-description">
+            Tour our championship hardwood courts and meet our coaching staff in person.
+          </p>
+
+          <div class="cta-buttons-row">
+            <a href="contact.html" class="btn-primary-court">
+              <span>Schedule Campus Tour</span>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </a>
+            <a href="login.html" class="btn-secondary-court">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+              <span>Player Dashboard</span>
+            </a>
+          </div>
+
+          <div class="cta-guarantee-note">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            <span>Complimentary 30-Minute Skills Consultation Included With Every Facility Tour</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================================
+       GLOBAL SCROLL TO TOP BUTTON
+       ====================================================================== -->
+  <button type="button" class="scroll-top-btn" aria-label="Scroll back to top">
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
+
+  <!-- ======================================================================
+       SHARED FOOTER
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-link" aria-label="Vortex Basketball Academy">
+            <img src="assets/images/icons/logo.svg" alt="Vortex Logo" class="brand-logo-img" width="36" height="36">
+            <div class="brand-text-group">
+              <span class="brand-title">VORTEX <span>HOOPS</span></span>
+              <span class="brand-tagline">TRAINING ACADEMY</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            Premier basketball institute cultivating elite players through biomechanics and mentorship.
+          </p>
+
+          <!-- Social Media Channels (Matching Reference Model) -->
+          <div class="footer-social-row" aria-label="Social Media Channels">
+            <a href="https://instagram.com" class="footer-social-pill" aria-label="Instagram" target="_blank" rel="noopener">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke-width="2"/>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" stroke-width="2"/>
+                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+              </svg>
+            </a>
+            <a href="https://facebook.com" class="footer-social-pill" aria-label="Facebook" target="_blank" rel="noopener">
+              <svg fill="currentColor" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+              </svg>
+            </a>
+            <a href="https://youtube.com" class="footer-social-pill" aria-label="YouTube" target="_blank" rel="noopener">
+              <svg fill="currentColor" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </a>
+            <a href="https://wa.me/18005554667" class="footer-social-pill" aria-label="WhatsApp" target="_blank" rel="noopener">
+              <svg fill="currentColor" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                <path d="M12.031 0C5.397 0 0 5.398 0 12.034c0 2.12.553 4.19 1.603 6.01L.069 24l6.126-1.606a12.008 12.008 0 005.836 1.505h.005c6.632 0 12.03-5.398 12.03-12.035 0-3.217-1.252-6.24-3.528-8.517A11.97 11.97 0 0012.031 0zm0 22.029h-.004a10.02 10.02 0 01-5.11-1.397l-.367-.218-3.799.996 1.014-3.704-.239-.38a9.987 9.987 0 01-1.532-5.292c0-5.529 4.498-10.028 10.034-10.028 2.68 0 5.197 1.044 7.09 2.939a9.96 9.96 0 012.933 7.095c0 5.53-4.5 10.029-10.035 10.029z"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="footer-badges">
+            <span class="footer-badge-pill">
+              <svg fill="currentColor" viewBox="0 0 20 20" width="14" height="14" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd" />
+              </svg>
+              USAB Certified
+            </span>
+            <span class="footer-badge-pill">
+              <svg fill="currentColor" viewBox="0 0 20 20" width="14" height="14" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd" />
+              </svg>
+              FIBA Accredited
+            </span>
+          </div>
+        </div>
+
+        <!-- Quick Links: Academy Column -->
+        <div>
+          <h3 class="footer-heading">Academy</h3>
+          <ul class="footer-link-list">
+            <li><a href="about.html">About The Academy</a></li>
+            <li><a href="coaches.html">Master Coaches</a></li>
+            <li><a href="dashboard.html">Player Dashboard</a></li>
+            <li><a href="contact.html">Facility Location</a></li>
+            <li><a href="login.html">Player Login Portal</a></li>
+          </ul>
+        </div>
+
+        <!-- Training Programs Column -->
+        <div>
+          <h3 class="footer-heading">Programs</h3>
+          <ul class="footer-link-list">
+            <li><a href="programs.html">Elite Skills Lab</a></li>
+            <li><a href="programs.html">Shooting Mechanics</a></li>
+            <li><a href="programs.html">Youth Fundamentals</a></li>
+            <li><a href="programs.html">Strength &amp; Speed</a></li>
+            <li><a href="programs.html">College Combine Prep</a></li>
+          </ul>
+        </div>
+
+        <!-- Schedule & Court Hours -->
+        <div>
+          <h3 class="footer-heading">Facility Hours</h3>
+          <div class="footer-schedule-box">
+            <div class="schedule-row">
+              <span>Mon – Fri:</span>
+              <span class="schedule-highlight">06:00 AM – 10:00 PM</span>
+            </div>
+            <div class="schedule-row">
+              <span>Saturday:</span>
+              <span class="schedule-highlight">07:00 AM – 09:00 PM</span>
+            </div>
+            <div class="schedule-row">
+              <span>Sunday:</span>
+              <span class="schedule-highlight">08:00 AM – 06:00 PM</span>
+            </div>
+            <div class="schedule-row">
+              <span>Private Booking:</span>
+              <span class="schedule-highlight">By Reservation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <p>&copy; 2026 Vortex Basketball Academy. All rights reserved. Built for athletic excellence.</p>
+        <p>Court Pro Coaching System &bull; Direct Player Portal</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core Scripts (Zero Inline JS) -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

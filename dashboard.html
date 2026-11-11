@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Player Performance Dashboard | Vortex Basketball Academy</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+
+  <!-- Core Stylesheets (Zero Inline CSS) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body class="portal-app-page">
+
+  <!-- ======================================================================
+       PAGE LOADER
+       ====================================================================== -->
+  <div id="page-loader" role="status" aria-live="polite">
+    <div class="loader-brand-box">
+      <div class="loader-logo-wrap">
+        <img src="assets/images/icons/logo.svg" alt="Vortex Basketball Academy Logo" width="72" height="72">
+      </div>
+      <h2 class="loader-brand-title">Vortex Academy</h2>
+      <p class="loader-brand-tag">Player Performance Dashboard</p>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       PORTAL TOP BAR (PERMANENTLY FIXED APPLICATION HEADER)
+       ====================================================================== -->
+  <header class="portal-top-bar" id="portal-header">
+    <div class="portal-top-container">
+
+      <!-- Brand Logo & Portal Title (Matched Exactly to Home 1) -->
+      <a href="index.html" class="brand-link portal-brand-block" aria-label="Return to Vortex Basketball Academy Home">
+        <img src="assets/images/icons/logo.svg" alt="Vortex Logo" class="brand-logo-img" width="36" height="36">
+        <div class="brand-text-group portal-brand-titles">
+          <span class="brand-title portal-brand-main">VORTEX <span>HOOPS</span></span>
+          <span class="brand-tagline portal-brand-sub">TRAINING ACADEMY</span>
+        </div>
+      </a>
+
+      <!-- Header Controls: RTL, Dark Theme, Logout -->
+      <div class="portal-top-actions">
+        <!-- RTL / LTR Toggle Button -->
+        <button type="button" class="icon-control-btn rtl-toggle-btn" aria-label="Toggle Text Direction">
+          <span class="dir-label">RTL</span>
+        </button>
+
+        <!-- Dark / Light Mode Toggle Button -->
+        <button type="button" class="icon-control-btn theme-toggle-btn" aria-label="Toggle Theme Mode">
+          <svg class="moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+          <svg class="sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+        </button>
+
+        <!-- Logout Button (Reference Matching) -->
+        <a href="login.html" class="header-login-btn" aria-label="Logout of Player Portal">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+          </svg>
+          <span>Logout</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       MAIN APPLICATION LAYOUT: LOCKED SIDEBAR + TAB-SWITCHED WORKSPACE
+       ====================================================================== -->
+  <main class="portal-app-layout" id="main-content">
+    <div class="portal-app-grid">
+
+      <!-- ==================================================================
+           LEFT SIDEBAR: ATHLETE MENU + COACH ON-DUTY DESK (STICKY LOCKED)
+           ================================================================== -->
+      <aside class="portal-app-sidebar" aria-label="Athlete Portal Navigation">
+
+        <!-- Navigation Menu -->
+        <div class="portal-sidebar-nav-box">
+          <div class="portal-menu-header">Athlete Menu</div>
+          <ul class="portal-menu-links" role="tablist">
+            <li>
+              <a href="#overview" class="portal-menu-item active" data-tab="tab-overview" role="tab"
+                aria-selected="true" aria-controls="tab-overview">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                </svg>
+                <span>Overview</span>
+              </a>
+            </li>
+            <li>
+              <a href="#booking" class="portal-menu-item" data-tab="tab-booking" role="tab" aria-selected="false"
+                aria-controls="tab-booking">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <span>Book Court Sessions</span>
+              </a>
+            </li>
+            <li>
+              <a href="#skills" class="portal-menu-item" data-tab="tab-skills" role="tab" aria-selected="false"
+                aria-controls="tab-skills">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+                <span>Track Skills &amp; Biometrics</span>
+              </a>
+            </li>
+            <li>
+              <a href="#shooting" class="portal-menu-item" data-tab="tab-shooting" role="tab" aria-selected="false"
+                aria-controls="tab-shooting">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                <span>Shooting Arc Telemetry</span>
+              </a>
+            </li>
+            <li>
+              <a href="#leagues" class="portal-menu-item" data-tab="tab-leagues" role="tab" aria-selected="false"
+                aria-controls="tab-leagues">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
+                </svg>
+                <span>Register for Leagues</span>
+              </a>
+            </li>
+            <li>
+              <a href="#profile" class="portal-menu-item" data-tab="tab-profile" role="tab" aria-selected="false"
+                aria-controls="tab-profile">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                <span>Scouting Profile</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Coach On-Duty Desk (Reference Matching) -->
+        <div class="portal-mentor-desk">
+          <h3 class="portal-mentor-title">Coach On-Duty Desk</h3>
+          <p class="portal-mentor-desc">
+            Questions regarding today's court booking, Noah sensor arc logs, or combine scheduling? Academy hotline:
+            ext. 402.
+          </p>
+          <div class="portal-mentor-status">
+            <span class="pulse-dot-green" aria-hidden="true"></span>
+            <span>Coach Marcus Thorne, USAB Gold Online</span>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- ==================================================================
+           RIGHT WORKSPACE: TABBED PANELS (ONLY THE CLICKED TAB IS VISIBLE)
+           ================================================================== -->
+      <div class="portal-app-main">
+
+        <!-- --------------------------------------------------------------
+             TAB 1: OVERVIEW (ACTIVE BY DEFAULT)
+             Contains Welcome Banner, 4 KPI Cards, and Schedule Highlights
+             -------------------------------------------------------------- -->
+        <section class="portal-tab-content active" id="tab-overview" role="tabpanel"
+          aria-label="Player Overview Dashboard">
+
+          <!-- 1. Welcome Banner Card (Reference Match) -->
+          <div class="portal-section-welcome">
+            <div class="portal-welcome-text">
+              <h1 class="portal-welcome-title">Welcome back, Marcus</h1>
+              <p class="portal-welcome-protocol">
+                Active Protocol: <strong>Varsity Combine Prep (Year 2 &bull; Point Guard)</strong> &bull; Attending
+                Coach: <strong>Coach Marcus Thorne (USAB Gold)</strong>
+              </p>
+            </div>
+            <div class="portal-welcome-actions">
+              <a href="#booking" class="btn-primary-court">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                </svg>
+                <span>+ Book Court Session</span>
+              </a>
+              <a href="#skills" class="btn-secondary-court">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span>View Combine Scorecard</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 2. 4 Symmetrical KPI Cards (Reference Match) -->
+          <div class="portal-section-kpis">
+
+            <!-- Card 1: Next Court Session -->
+            <div class="portal-kpi-card">
+              <div>
+                <div class="portal-kpi-header">
+                  <span class="portal-kpi-label">Court Duty</span>
+                  <span class="portal-kpi-icon" aria-hidden="true">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                  </span>
+                </div>
+                <div class="portal-kpi-val">Tomorrow &bull; 07:00 AM</div>
+                <p class="portal-kpi-desc">Maple Arena &bull; Court 1 (Skills Lab)</p>
+              </div>
+              <div class="portal-kpi-footer">
+                <span>Preceptor: Coach Thorne</span>
+                <span class="portal-kpi-link">&rarr;</span>
+              </div>
+            </div>
+
+            <!-- Card 2: Shot Reps Logged -->
+            <div class="portal-kpi-card">
+              <div>
+                <div class="portal-kpi-header">
+                  <span class="portal-kpi-label">Reps Logged</span>
+                  <span class="portal-kpi-icon" aria-hidden="true">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </span>
+                </div>
+                <div class="portal-kpi-val">12,450 <span>/ 15,000</span></div>
+                <p class="portal-kpi-desc">Phase 4: Pull-up Arc Recalibration</p>
+              </div>
+              <div class="portal-kpi-footer">
+                <span class="status-pill-green">Sensor Cycle Passed</span>
+
+              </div>
+            </div>
+
+            <!-- Card 3: Recent Combine Score -->
+            <div class="portal-kpi-card">
+              <div>
+                <div class="portal-kpi-header">
+                  <span class="portal-kpi-label">Combine Score</span>
+                  <span class="portal-kpi-icon" aria-hidden="true">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </span>
+                </div>
+                <div class="portal-kpi-val">94.50 <span>/ 100</span></div>
+                <p class="portal-kpi-desc portal-kpi-highlight">National Combine Rank #2 &bull; 98.6%ile</p>
+              </div>
+              <div class="portal-kpi-footer">
+                <span>Combine SIM Level 2 Passed</span>
+
+              </div>
+            </div>
+
+            <!-- Card 4: Pending League Registration -->
+            <div class="portal-kpi-card">
+              <div>
+                <div class="portal-kpi-header">
+                  <span class="portal-kpi-label">League Status</span>
+                  <span class="portal-kpi-icon" aria-hidden="true">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
+                    </svg>
+                  </span>
+                </div>
+                <div class="portal-kpi-val">Winter Combine 5v5</div>
+                <p class="portal-kpi-desc">Full-Court Scout Showcase &bull; 12 Slots Left</p>
+              </div>
+              <div class="portal-kpi-footer">
+                <span class="portal-kpi-link">Register Roster Now &rarr;</span>
+                <span class="status-pill-orange">Due Soon</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- 3. Schedule Highlights Table (Reference Match) -->
+          <div class="portal-section-schedule">
+            <div class="portal-schedule-header">
+              <h2 class="portal-schedule-title">Schedule Highlights &amp; Upcoming Court Rotations</h2>
+              <span class="portal-schedule-link">View Full Schedule &rarr;</span>
+            </div>
+
+            <div class="dash-table-wrap">
+              <table class="dash-schedule-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Session / Court Rotation</th>
+                    <th scope="col">Date &amp; Time</th>
+                    <th scope="col">Coach / Proctor</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>Kinematic Pick-and-Roll Decision Simulation</strong>
+                      <span class="table-subtext">CBT Terminal 1 &bull; 30 Simulation Objectives</span>
+                    </td>
+                    <td>Tomorrow &bull; 07:00 AM</td>
+                    <td>Coach Marcus Thorne (USAB Gold)</td>
+                    <td><span class="badge-confirmed">Confirmed</span></td>
+                    <td>
+                      <button type="button" class="btn-table-sm-primary">
+                        Launch Film
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <strong>Noah Sensor High-Volume Shooting Recalibration</strong>
+                      <span class="table-subtext">Arc Depth Telemetry &bull; 500 Catch Reps</span>
+                    </td>
+                    <td>Friday &bull; 04:30 PM</td>
+                    <td>Dr. Sarah Vance, PhD Biomechanics</td>
+                    <td><span class="badge-confirmed">Confirmed</span></td>
+                    <td>
+                      <button type="button" class="btn-table-sm-secondary">
+                        Prep Notes
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <strong>Lateral Deceleration &amp; Slide Agility Drill</strong>
+                      <span class="table-subtext">Force Plate Dual-Leg Brake Analysis</span>
+                    </td>
+                    <td>Saturday &bull; 10:00 AM</td>
+                    <td>Coach Tariq Sterling, CSCS</td>
+                    <td><span class="court-badge">Scheduled</span></td>
+                    <td>
+                      <button type="button" class="btn-table-sm-secondary">
+                        View Drills
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- --------------------------------------------------------------
+             TAB 2: BOOK COURT SESSIONS (ONLY VISIBLE ON BOOKING CLICK)
+             -------------------------------------------------------------- -->
+        <section class="portal-tab-content" id="tab-booking" role="tabpanel" aria-label="Book Court Sessions">
+          <div class="portal-section-header-card">
+            <span class="section-eyebrow">Session Reservation Desk</span>
+            <h2 class="section-heading-lg">Book Maple Arena &amp; Skills Lab Sessions</h2>
+            <p class="section-subtext">
+              Reserve individual shooting bays, full-court scrimmage blocks, or 1-on-1 film consultation with master
+              coaching staff.
+            </p>
+          </div>
+
+          <div class="portal-section-welcome">
+            <div>
+              <h3 class="portal-welcome-title">Next Available Slot: Today &bull; 04:00 PM</h3>
+              <p class="portal-welcome-protocol">Maple Arena Court 2 (Shooting Lab Bay B) &bull; Attending Coach:
+                <strong>Coach Tariq Sterling</strong>.
+              </p>
+            </div>
+            <div class="portal-welcome-actions">
+              <button type="button" class="btn-primary-court">
+                <span>+ Reserve New Court Slot</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="portal-section-schedule">
+            <div class="portal-schedule-header">
+              <h3 class="portal-schedule-title">Active Court Reservations</h3>
+              <span class="badge-confirmed">Confirmed Bookings</span>
+            </div>
+
+            <div class="dash-table-wrap">
+              <table class="dash-schedule-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Court Facility</th>
+                    <th scope="col">Reserved Date &amp; Time</th>
+                    <th scope="col">Training Focus</th>
+                    <th scope="col">Assigned Coach</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Maple Arena &bull; Court 1</strong></td>
+                    <td>Tomorrow &bull; 07:00 AM</td>
+                    <td>Point Guard Pick-and-Roll Reads</td>
+                    <td>Coach Marcus Thorne</td>
+                    <td><span class="badge-confirmed">Slot Confirmed</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Noah Sensor Lab &bull; Bay A</strong></td>
+                    <td>Friday &bull; 04:30 PM</td>
+                    <td>45° Apex Shot Arc Recalibration</td>
+                    <td>Dr. Sarah Vance</td>
+                    <td><span class="badge-confirmed">Slot Confirmed</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Maple Arena &bull; Court 2</strong></td>
+                    <td>Saturday &bull; 10:00 AM</td>
+                    <td>Slide Agility &amp; Brake Force</td>
+                    <td>Coach Tariq Sterling</td>
+                    <td><span class="court-badge">Waitlist Confirmed</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- --------------------------------------------------------------
+             TAB 3: TRACK SKILLS & BIOMETRICS (ONLY VISIBLE ON SKILLS CLICK)
+             -------------------------------------------------------------- -->
+        <section class="portal-tab-content" id="tab-skills" role="tabpanel" aria-label="Track Skills and Biometrics">
+          <div class="portal-section-header-card">
+            <span class="section-eyebrow">Motor Benchmark Diagnostics</span>
+            <h2 class="section-heading-lg">Live Skill Evaluation &amp; Biometric Tracking</h2>
+            <p class="section-subtext">
+              Real-time biomechanical telemetry recorded across dual force plates, high-speed optical tracking, and
+              certified combine proctors.
+            </p>
+          </div>
+
+          <div class="portal-section-kpis">
+            <div class="portal-kpi-card">
+              <div class="portal-kpi-header">
+                <span class="portal-kpi-label">Lane Agility Time</span>
+                <span class="portal-kpi-icon" aria-hidden="true">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </span>
+              </div>
+              <div class="portal-kpi-val">10.42s <span>(10.8s Target)</span></div>
+              <p class="portal-kpi-desc portal-kpi-highlight">+0.38s Faster than D1 Baseline</p>
+              <div class="portal-kpi-footer">
+                <span>Combine Tested</span>
+                <span class="badge-confirmed">Top 5%</span>
+              </div>
+            </div>
+
+            <div class="portal-kpi-card">
+              <div class="portal-kpi-header">
+                <span class="portal-kpi-label">Max Vertical Leap</span>
+                <span class="portal-kpi-icon" aria-hidden="true">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                  </svg>
+                </span>
+              </div>
+              <div class="portal-kpi-val">38.5" <span>(36.0" Baseline)</span></div>
+              <p class="portal-kpi-desc">+2.5" Above Combine Standard</p>
+              <div class="portal-kpi-footer">
+                <span>Force Plate Verified</span>
+                <span class="badge-confirmed">Elite Tier</span>
+              </div>
+            </div>
+
+            <div class="portal-kpi-card">
+              <div class="portal-kpi-header">
+                <span class="portal-kpi-label">3/4 Court Sprint</span>
+                <span class="portal-kpi-icon" aria-hidden="true">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </span>
+              </div>
+              <div class="portal-kpi-val">3.12s <span>(Top 5%ile)</span></div>
+              <p class="portal-kpi-desc">Sub-3.15s Transition Velocity</p>
+              <div class="portal-kpi-footer">
+                <span>Optic Laser Timed</span>
+                <span class="badge-confirmed">Certified</span>
+              </div>
+            </div>
+
+            <div class="portal-kpi-card">
+              <div class="portal-kpi-header">
+                <span class="portal-kpi-label">Deceleration Brake</span>
+                <span class="portal-kpi-icon" aria-hidden="true">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </span>
+              </div>
+              <div class="portal-kpi-val">4.18s <span>Reactive</span></div>
+              <p class="portal-kpi-desc">Symmetric Ground Force (98% Left/Right)</p>
+              <div class="portal-kpi-footer">
+                <span>Injury Prevention</span>
+                <span class="badge-confirmed">Grade A</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="portal-tracking-grid">
+            <div class="tracking-box-card">
+              <div>
+                <span class="section-eyebrow">Agility Benchmarks</span>
+                <h3 class="tier-title">Kinetic Acceleration</h3>
+                <div class="skill-meters-stack">
+                  <div class="skill-meter-row">
+                    <div class="skill-meter-header">
+                      <span>Lateral Deceleration Braking Force</span>
+                      <span class="skill-val-primary">95% Optimal</span>
+                    </div>
+                    <div class="skill-progress-bar">
+                      <div class="skill-bar-fill w-95"></div>
+                    </div>
+                  </div>
+                  <div class="skill-meter-row">
+                    <div class="skill-meter-header">
+                      <span>First-Step Explosion Index</span>
+                      <span class="skill-val-primary">98% Match</span>
+                    </div>
+                    <div class="skill-progress-bar">
+                      <div class="skill-bar-fill w-98"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tracking-box-card">
+              <div>
+                <span class="section-eyebrow">Sustained Power</span>
+                <h3 class="tier-title">Conditioning Stamina</h3>
+                <div class="skill-meters-stack">
+                  <div class="skill-meter-row">
+                    <div class="skill-meter-header">
+                      <span>4th Quarter Repeat Sprint Capacity</span>
+                      <span class="skill-val-accent">96% Retained</span>
+                    </div>
+                    <div class="skill-progress-bar">
+                      <div class="skill-bar-fill fill-green w-96"></div>
+                    </div>
+                  </div>
+                  <div class="skill-meter-row">
+                    <div class="skill-meter-header">
+                      <span>Core Rotational Torque Transfer</span>
+                      <span class="skill-val-accent">94% Efficient</span>
+                    </div>
+                    <div class="skill-progress-bar">
+                      <div class="skill-bar-fill fill-green w-94"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- --------------------------------------------------------------
+             TAB 4: SHOOTING ARC TELEMETRY (ONLY VISIBLE ON SHOOTING CLICK)
+             -------------------------------------------------------------- -->
+        <section class="portal-tab-content" id="tab-shooting" role="tabpanel" aria-label="Shooting Arc Telemetry">
+          <div class="portal-section-header-card">
+            <span class="section-eyebrow">Noah Sensor Suite</span>
+            <h2 class="section-heading-lg">Noah Sensor Shooting Arc Telemetry</h2>
+            <p class="section-subtext">
+              Precision digital trajectory tracking: entry angle, cylinder depth, and catch-to-release biomechanics.
+            </p>
+          </div>
+
+          <div class="portal-section-welcome">
+            <div>
+              <h3 class="portal-welcome-title">12,450 Logged <span>/ 15,000 Target Reps</span></h3>
+              <p class="portal-welcome-protocol">
+                Noah Composite Rating: <strong>94.20 / 100</strong> &bull; National Percentile:
+                <strong>98.2%ile</strong>.
+              </p>
+              <div class="skill-progress-bar portal-progress-wrap">
+                <div class="skill-bar-fill w-79"></div>
+              </div>
+            </div>
+            <div class="portal-welcome-actions">
+              <button type="button" class="btn-primary-court">
+                <span>Launch Noah Calibration</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="portal-section-schedule">
+            <div class="portal-schedule-header">
+              <h3 class="portal-schedule-title">Kinematic Shot Parameters</h3>
+              <span class="badge-confirmed">Noah Verified Telemetry</span>
+            </div>
+
+            <div class="dash-table-wrap">
+              <table class="dash-schedule-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Telemetry Metric</th>
+                    <th scope="col">Current Measurement</th>
+                    <th scope="col">NBA / D1 Standard</th>
+                    <th scope="col">Accuracy Rating</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Apex Arc Angle</strong></td>
+                    <td><strong>45.4°</strong></td>
+                    <td>45.0° &plusmn; 1.0°</td>
+                    <td>98.4% Match</td>
+                    <td><span class="badge-confirmed">Optimal</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Catch-and-Shoot Release Time</strong></td>
+                    <td><strong>0.38s</strong></td>
+                    <td>&lt; 0.45s</td>
+                    <td>Elite Release Tier</td>
+                    <td><span class="badge-confirmed">Optimal</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Cylinder Entry Depth</strong></td>
+                    <td><strong>11.2"</strong></td>
+                    <td>11.0" &plusmn; 0.5"</td>
+                    <td>94.6% Exact</td>
+                    <td><span class="badge-confirmed">Optimal</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Fatigued Free Throw Accuracy</strong></td>
+                    <td><strong>92.4%</strong></td>
+                    <td>&gt; 85.0%</td>
+                    <td>92 of 100 Reps</td>
+                    <td><span class="badge-confirmed">Optimal</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- --------------------------------------------------------------
+             TAB 5: REGISTER FOR LEAGUES (ONLY VISIBLE ON LEAGUES CLICK)
+             -------------------------------------------------------------- -->
+        <section class="portal-tab-content" id="tab-leagues" role="tabpanel" aria-label="Register for Leagues">
+          <div class="portal-section-header-card">
+            <span class="section-eyebrow">Tournament &amp; Showcase Portal</span>
+            <h2 class="section-heading-lg">Register for Competitive Leagues &amp; Combines</h2>
+            <p class="section-subtext">
+              Official registration for NCAA scout showcases, FIBA youth circuits, and regional Pro-Am invitationals.
+            </p>
+          </div>
+
+          <div class="portal-section-welcome">
+            <div>
+              <h3 class="portal-welcome-title">Winter Pro-Am Combine 5v5 Showcase</h3>
+              <p class="portal-welcome-protocol">
+                Dates: <strong>Dec 18–22, 2026</strong> &bull; Roster Status: <strong>12 Slots Remaining</strong> &bull;
+                Scouts: NCAA D1, NBA G-League.
+              </p>
+            </div>
+            <div class="portal-welcome-actions">
+              <button type="button" class="btn-primary-court">
+                <span>Confirm League Registration</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="portal-section-schedule">
+            <div class="portal-schedule-header">
+              <h3 class="portal-schedule-title">Enrolled League Roster</h3>
+              <span class="portal-schedule-link">Past League Results &rarr;</span>
+            </div>
+
+            <div class="dash-table-wrap">
+              <table class="dash-schedule-table">
+                <thead>
+                  <tr>
+                    <th scope="col">League / Tournament</th>
+                    <th scope="col">Division Bracket</th>
+                    <th scope="col">Roster Status</th>
+                    <th scope="col">Scout Film Package</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Winter Combine 5v5</strong></td>
+                    <td>Varsity Showcase &bull; Conference A</td>
+                    <td><span class="badge-confirmed">Draft Confirmed</span></td>
+                    <td>Automated Telemetry Upload</td>
+                    <td><button type="button" class="btn-table-sm-primary">View Bracket</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Summer Pro-Am Division 1</strong></td>
+                    <td>Metro Elite &bull; Roster #3</td>
+                    <td><span class="court-badge">Pending Payment</span></td>
+                    <td>Full-Game 4K Film Included</td>
+                    <td><button type="button" class="btn-table-sm-secondary">Finalize Roster</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- --------------------------------------------------------------
+             TAB 6: ATHLETE SCOUTING PROFILE (ONLY VISIBLE ON PROFILE CLICK)
+             -------------------------------------------------------------- -->
+        <section class="portal-tab-content" id="tab-profile" role="tabpanel" aria-label="Athlete Scouting Profile">
+          <div class="portal-section-header-card">
+            <span class="section-eyebrow">Scouting Records</span>
+            <h2 class="section-heading-lg">Official Athlete Scouting &amp; Academic Profile</h2>
+            <p class="section-subtext">
+              Verified physical measurements, USAB SafeSport clearance, and collegiate recruitment portfolio.
+            </p>
+          </div>
+
+          <div class="portal-section-welcome">
+            <div>
+              <h3 class="portal-welcome-title">Marcus Thorne Jr.</h3>
+              <p class="portal-welcome-protocol">
+                Player ID: <strong>VTX-2026-042</strong> &bull; Position: <strong>Point Guard (Class of
+                  2026)</strong><br>
+                Height: <strong>6'3"</strong> &bull; Weight: <strong>195 lbs</strong> &bull; Wingspan:
+                <strong>6'7"</strong> &bull; Standing Reach: <strong>8'4"</strong>
+              </p>
+            </div>
+            <div class="portal-welcome-actions">
+              <a href="login.html" class="btn-secondary-court">
+                <span>Update Player Bio</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="portal-section-kpis">
+            <div class="portal-kpi-card">
+              <span class="portal-kpi-label">Head Coach Advisor</span>
+              <div class="portal-kpi-val portal-kpi-compact-val">Coach Marcus Thorne</div>
+              <p class="portal-kpi-desc">USAB Gold Certified &bull; D1 Lead</p>
+              <div class="portal-kpi-footer">
+                <span class="status-pill-green">Direct Mentor</span>
+              </div>
+            </div>
+
+            <div class="portal-kpi-card">
+              <span class="portal-kpi-label">NCAA Eligibility</span>
+              <div class="portal-kpi-val portal-kpi-compact-val">ID #240981-VTX</div>
+              <p class="portal-kpi-desc">NCAA Eligibility Center Cleared</p>
+              <div class="portal-kpi-footer">
+                <span class="badge-confirmed">Active Qualifier</span>
+              </div>
+            </div>
+
+            <div class="portal-kpi-card">
+              <span class="portal-kpi-label">Academic Standing</span>
+              <div class="portal-kpi-val portal-kpi-compact-val">3.85 GPA</div>
+              <p class="portal-kpi-desc">Honors Academic All-American</p>
+              <div class="portal-kpi-footer">
+                <span class="badge-confirmed">Top 5%</span>
+              </div>
+            </div>
+
+            <div class="portal-kpi-card">
+              <span class="portal-kpi-label">Combine Level</span>
+              <div class="portal-kpi-val portal-kpi-compact-val">Level 2 Certified</div>
+              <p class="portal-kpi-desc">Noah &amp; Force Plate Validated</p>
+              <div class="portal-kpi-footer">
+                <span class="badge-confirmed">Certified</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Core Scripts (Zero Inline JS) -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

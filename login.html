@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Athlete Portal Login | Vortex Basketball Academy</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+  
+  <!-- Core Stylesheets (Zero Inline CSS) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="auth-page-wrapper">
+
+  <!-- ======================================================================
+       PAGE LOADER
+       ====================================================================== -->
+  <div id="page-loader" role="status" aria-live="polite">
+    <div class="loader-brand-box">
+      <div class="loader-logo-wrap">
+        <img src="assets/images/icons/logo.svg" alt="Vortex Basketball Academy Logo" width="72" height="72">
+      </div>
+      <h2 class="loader-brand-title">Vortex Academy</h2>
+      <p class="loader-brand-tag">Athlete Security Portal</p>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       PORTAL HEADER (MATCHING REFERENCE NAVIGATION CONTROLS)
+       ====================================================================== -->
+  <header class="auth-site-header">
+    <div class="auth-header-container">
+      
+      <!-- Brand Logo & Name -->
+      <a href="index.html" class="brand-link" aria-label="Vortex Basketball Academy Home">
+        <img src="assets/images/icons/logo.svg" alt="Vortex Logo" class="brand-logo-img" width="36" height="36">
+        <div class="brand-text-group">
+          <span class="brand-title">VORTEX <span>HOOPS</span></span>
+          <span class="brand-tagline">PLAYER PORTAL</span>
+        </div>
+      </a>
+
+      <!-- Right Header Actions: Theme + Text Direction -->
+      <div class="header-actions">
+        <!-- Dark / Light Mode Toggle Button -->
+        <button type="button" class="icon-control-btn theme-toggle-btn" aria-label="Toggle Theme Mode">
+          <svg class="moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+          </svg>
+          <svg class="sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+          </svg>
+        </button>
+
+        <!-- RTL / LTR Toggle Button -->
+        <button type="button" class="icon-control-btn rtl-toggle-btn" aria-label="Toggle Text Direction">
+          <span class="dir-label">RTL</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       MAIN CONTENT: AUTHENTICATION CARD MODAL (REFERENCE MODEL)
+       ====================================================================== -->
+  <main class="auth-main-area" id="main-content">
+    <div class="auth-card-modal">
+      
+      <!-- Left Visual Column (Reference Matching) -->
+      <section class="auth-banner-col" aria-label="Portal Introduction">
+        <div>
+          <span class="auth-pill-tag">+ Your Personal Player Portal</span>
+          
+          <h1 class="auth-quote-heading">
+            &ldquo;Elite footwork mechanics, kinematic shooting arc tracking, and relentless court discipline transform dedicated athletes into world-class collegiate leaders.&rdquo;
+          </h1>
+
+          <p class="auth-quote-desc">
+            Access your official training logbook, track mandatory 1,400+ seasonal shooting reps, view combine sensor telemetry reports, and reserve Maple Arena court sessions in real time.
+          </p>
+        </div>
+
+        <div class="auth-trust-mark">
+          <svg fill="currentColor" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+          </svg>
+          <span>100% Confidential Athlete Ledger &amp; Scout Evaluation Records</span>
+        </div>
+      </section>
+
+      <!-- Right Form Column (Reference Matching) -->
+      <section class="auth-form-col" aria-label="Athlete Authentication Form">
+        
+        <!-- Tab Navigation (Sign In vs New Registration) -->
+        <div class="auth-tabs-row" role="tablist">
+          <button type="button" class="auth-tab-btn active" data-tab="signin-panel" role="tab" aria-selected="true" aria-controls="signin-panel">
+            Sign In
+          </button>
+          <button type="button" class="auth-tab-btn" data-tab="register-panel" role="tab" aria-selected="false" aria-controls="register-panel">
+            New Athlete Registration
+          </button>
+        </div>
+
+        <!-- Demo Environment Callout Banner -->
+        <div class="auth-demo-banner" role="note">
+          <strong class="auth-demo-title">Demo Environment:</strong>
+          <p class="auth-demo-text">
+            You can sign in using sample credentials below or click the one-click demo button to explore the player dashboard immediately.
+          </p>
+        </div>
+
+        <!-- TAB PANEL 1: SIGN IN -->
+        <div class="auth-tab-panel active" id="signin-panel" role="tabpanel">
+          <form action="dashboard.html" method="GET" class="auth-form" novalidate>
+            
+            <div class="auth-field-group">
+              <label for="signin-email" class="auth-field-label">Email or Athlete ID Number</label>
+              <input 
+                type="text" 
+                id="signin-email" 
+                name="identifier" 
+                class="form-input" 
+                value="marcus.thorne@vortexhoops.com" 
+                required>
+            </div>
+
+            <div class="auth-field-group">
+              <div class="auth-label-row">
+                <label for="signin-password" class="auth-field-label">Password</label>
+                <a href="contact.html" class="auth-forgot-link">Forgot password?</a>
+              </div>
+              <div class="auth-input-relative">
+                <input 
+                  type="password" 
+                  id="signin-password" 
+                  name="password" 
+                  class="form-input" 
+                  value="VortexCombine2026!" 
+                  required>
+                <button type="button" class="password-toggle-eye" aria-label="Toggle password visibility">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <label class="auth-checkbox-label">
+              <input type="checkbox" name="remember" checked>
+              <span>Remember me on this device</span>
+            </label>
+
+            <div class="auth-btn-stack">
+              <button type="submit" class="btn-auth-primary">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"/>
+                </svg>
+                <span>Sign In to Dashboard</span>
+              </button>
+
+              <a href="dashboard.html" class="btn-auth-demo">
+                <span>One-Click Demo Sign In &rarr;</span>
+              </a>
+            </div>
+
+          </form>
+        </div>
+
+        <!-- TAB PANEL 2: REGISTRATION -->
+        <div class="auth-tab-panel" id="register-panel" role="tabpanel">
+          <form action="dashboard.html" method="GET" class="auth-form" novalidate>
+            
+            <div class="auth-field-group">
+              <label for="reg-name" class="auth-field-label">Athlete Full Name</label>
+              <input type="text" id="reg-name" name="fullname" class="form-input" placeholder="e.g. Jordan Ellis" required>
+            </div>
+
+            <div class="auth-field-group">
+              <label for="reg-email" class="auth-field-label">Email Address</label>
+              <input type="email" id="reg-email" name="email" class="form-input" placeholder="jordan@example.com" required>
+            </div>
+
+            <div class="auth-field-group">
+              <label for="reg-tier" class="auth-field-label">Development Tier</label>
+              <select id="reg-tier" name="tier" class="form-select" required>
+                <option value="" disabled selected>Select Athlete Tier</option>
+                <option value="youth">Youth Academy (8–12)</option>
+                <option value="varsity">Varsity Combine Prep (13–18)</option>
+                <option value="college">Collegiate Showcase (18–22)</option>
+              </select>
+            </div>
+
+            <div class="auth-field-group">
+              <label for="reg-password" class="auth-field-label">Create Password</label>
+              <div class="auth-input-relative">
+                <input type="password" id="reg-password" name="new-password" class="form-input" placeholder="Minimum 8 characters" required>
+              </div>
+            </div>
+
+            <div class="auth-btn-stack">
+              <button type="submit" class="btn-auth-primary">
+                <span>Complete Registration &rarr;</span>
+              </button>
+            </div>
+
+          </form>
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Core Scripts (Zero Inline JS) -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

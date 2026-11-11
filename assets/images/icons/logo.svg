@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" class="w-full h-full">
+  <defs>
+    <linearGradient id="vortexGrad" x1="4" y1="4" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF6B00"/>
+      <stop offset="100%" stop-color="#FF3700"/>
+    </linearGradient>
+    <linearGradient id="glowRing" x1="0" y1="24" x2="48" y2="24" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF5500" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#FF5500" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#FF5500" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+  <!-- Outer Rim Ring -->
+  <circle cx="24" cy="24" r="22" stroke="url(#vortexGrad)" stroke-width="2.5" stroke-dasharray="80 12" stroke-linecap="round"/>
+  <!-- Basketball Core Sphere -->
+  <circle cx="24" cy="24" r="16" fill="#0A0A0A" stroke="#FF5500" stroke-width="1.8"/>
+  <!-- Seam Lines - Curved Ribs -->
+  <path d="M8 24H40" stroke="#FF5500" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M24 8V40" stroke="#FF5500" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M14 11C18 15 20 20 20 24C20 28 18 33 14 37" stroke="#FF5500" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M34 11C30 15 28 20 28 24C28 28 30 33 34 37" stroke="#FF5500" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Top Apex Star / Speed Notch -->
+  <polygon points="24,3 27,10 21,10" fill="#FF5500"/>
+</svg>
+
